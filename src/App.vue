@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
-import { signal } from 'vue-signals'
+import { onMounted, ref } from 'vue'
+// import { signal } from 'vue-signals'
 
-const theme = signal<string | null>(null)
+// const theme = signal<string | null>(null)
+const theme = ref<string | null>(null)
 
 onMounted(() => {
   const url = new URL(window.location.href)
@@ -10,26 +11,26 @@ onMounted(() => {
   const initialTheme = url.searchParams.get('theme')
 
   if (initialTheme) {
-    theme.set(initialTheme as string)
+    theme.value = initialTheme
   }
 
   window.addEventListener('message', (event) => {
     if (event.data.type === 'theme') {
-      theme.set(event.data.content)
+      theme.value = event.data.content
     }
   })
 })
 </script>
 
 <template>
-  <main :data-theme="theme()">
+  <main :data-theme="theme">
     <h2>Fluid Forms</h2>
     <div class="forms">
-      <div>✱</div>
-      <div>◆</div>
-      <div>▲</div>
-      <div>●</div>
-      <div>◼︎</div>
+      <button>✱</button>
+      <button>◆</button>
+      <button>▲</button>
+      <button>●</button>
+      <button>◼︎</button>
     </div>
   </main>
 </template>
