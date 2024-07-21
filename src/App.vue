@@ -22,5 +22,34 @@ onMounted(() => {
 </script>
 
 <template>
-  <main :data-theme="theme()">Welcome to your plugin!</main>
+  <main :data-theme="theme()">
+    <h2>Fluid Forms</h2>
+    <div class="forms">
+      <div>✱</div>
+      <div>◆</div>
+      <div>▲</div>
+      <div>●</div>
+      <div>◼︎</div>
+    </div>
+  </main>
 </template>
+
+<style lang="less">
+[data-theme='dark'] {
+  /** Dark styles */
+  color: violet;
+}
+
+[data-theme='light'] {
+  /** Light styles */
+  color: red;
+}
+
+.forms {
+  display: flex;
+  div {
+    border: 1px solid black;
+    padding: 1em;
+  }
+}
+</style>

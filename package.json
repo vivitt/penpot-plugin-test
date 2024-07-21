@@ -16,6 +16,7 @@
   "dependencies": {
     "@penpot/plugin-styles": "^0.9.0",
     "@penpot/plugin-types": "^0.9.0",
+    "less": "^4.2.0",
     "vue": "^3.4.29",
     "vue-signals": "^0.3.1"
   },
