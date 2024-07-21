@@ -1,0 +1,7 @@
+{
+  "name": "Fluid Forms",
+  "description": "A plugin for adding fluid textured forms to your Pentpot file",
+  "code": "/plugin.js",
+  "icon": "/icon.png",
+  "permissions": ["content:read", "content:write", "library:read", "library:write", "user:read"]
+}

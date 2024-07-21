@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "dev": "vite build --watch & vite preview",
+    "build": "tsc && vite build",
     "preview": "vite preview",
     "test:unit": "vitest",
     "build-only": "vite build",
@@ -16,7 +16,8 @@
   "dependencies": {
     "@penpot/plugin-styles": "^0.9.0",
     "@penpot/plugin-types": "^0.9.0",
-    "vue": "^3.4.29"
+    "vue": "^3.4.29",
+    "vue-signals": "^0.3.1"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",
