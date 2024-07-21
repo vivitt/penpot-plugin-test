@@ -1,6 +1,6 @@
 import type { PluginMessageEvent } from './model'
 
-penpot.ui.open('Vue example plugin', `?theme=${penpot.getTheme()}`)
+penpot.ui.open('Textured Shapes Plugin', `?theme=${penpot.getTheme()}`)
 
 penpot.on('themechange', (theme) => {
   sendMessage({ type: 'theme', content: theme })

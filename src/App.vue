@@ -16,6 +16,7 @@ onMounted(() => {
 
   window.addEventListener('message', (event) => {
     if (event.data.type === 'theme') {
+      console.log(event.data.content)
       theme.value = event.data.content
     }
   })
@@ -24,7 +25,7 @@ onMounted(() => {
 
 <template>
   <main :data-theme="theme">
-    <h2>Fluid Forms</h2>
+    <h2>Textured Shapes</h2>
     <div class="forms">
       <button>✱</button>
       <button>◆</button>
@@ -36,14 +37,20 @@ onMounted(() => {
 </template>
 
 <style lang="less">
+main {
+  border: red 1px solid;
+  margin: 0;
+}
 [data-theme='dark'] {
   /** Dark styles */
-  color: violet;
+
+  color: #7efff5;
+  background-color: #18181a;
 }
 
 [data-theme='light'] {
   /** Light styles */
-  color: red;
+  color: #6911d4;
 }
 
 .forms {
