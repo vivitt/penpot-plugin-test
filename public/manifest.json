@@ -1,6 +1,6 @@
 {
   "name": "Textured Shapes",
-  "description": "A plugin for adding textured shapes in your Pentpot file",
+  "description": "A plugin for adding gradient textured shapes to your Penpot file",
   "code": "/plugin.js",
   "icon": "/icon.png",
   "permissions": ["content:read", "content:write", "library:read", "library:write", "user:read"]

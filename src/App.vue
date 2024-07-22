@@ -158,8 +158,8 @@ onMounted(() => {
 
 <template>
   <main :data-theme="theme">
-    <h2>Textured Shapes</h2>
-    <div class="forms">
+    <h3>Gradient Shapes</h3>
+    <div class="buttons">
       <shape-button
         v-for="shape in SHAPES"
         :key="shape.name"
@@ -172,23 +172,33 @@ onMounted(() => {
 </template>
 
 <style lang="less">
+main {
+  text-align: center;
+  button {
+    margin: 1em;
+    border-radius: 1em;
+  }
+}
 [data-theme='dark'] {
   /** Dark styles */
 
   color: #7efff5;
   background-color: #18181a;
+  button {
+    border: 1px solid #7efff5;
+  }
 }
 
 [data-theme='light'] {
   /** Light styles */
   color: #6911d4;
+  button {
+    border: 1px solid #6911d4;
+  }
 }
 
-.forms {
+.buttons {
   display: flex;
-  div {
-    border: 1px solid black;
-    padding: 1em;
-  }
+  flex-direction: column;
 }
 </style>
